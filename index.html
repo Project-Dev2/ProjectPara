@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Para</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/para.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- ======= Start TopBar ======= -->
+    <div class="topbar">
+      <nav class="navbar py-0">
+        <div class="container">
+          <span class="navbar-text text-light fw-bold">
+            <i class="fas fa-mobile-alt me-2"></i>
+            Appeler-Nous (+216) 50 000 000
+          </span>
+
+          <form class="d-flex" role="search">
+            <input class="p-2 search" placeholder="Rechercher un produit" />
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <div class="icons mt-2">
+            <button
+              class="btn py-0 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#login"
+            >
+              <i class="bi bi-person-circle"></i>
+              <p class="text-light">Se connecter</p>
+            </button>
+            <div
+              class="modal fade"
+              id="login"
+              tabindex="-1"
+              aria-labelledby="login"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="login">
+                      Connectez-vous à votre compte
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="col-form-label">E-mail</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="E-mail"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label class="col-form-label">Mot de passe</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Mot de passe"
+                        />
+                      </div>
+                    </form>
+                    <a href="#"
+                      ><p class="text-center">Mot de passe oublié?</p></a
+                    >
+                    <button type="button" class="btn mb-2 mt-2">
+                      Se connecter
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn py-0 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#signup"
+            >
+              <i class="bi bi-pencil-square"></i>
+              <p class="text-light">S'inscrire</p>
+            </button>
+            <div
+              class="modal fade"
+              id="signup"
+              tabindex="-1"
+              aria-labelledby="signup"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="signup">Créer un compte</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="form" action="/">
+                      <div class="row">
+                        <div class="col message">
+                          <label>Prénom *</label>
+                          <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Prénom"
+                          />
+                          <div class="error"></div>
+                        </div>
+                        <div class="col message">
+                          <label>Nom *</label>
+                          <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Nom"
+                          />
+                          <div class="error"></div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col message">
+                          <label>E-mail *</label>
+                          <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="E-mail"
+                          />
+                          <div class="error"></div>
+                        </div>
+                        <div class="col message">
+                          <label>Téléphone *</label>
+                          <input
+                            type="text"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="Téléphone"
+                          />
+                          <div class="error"></div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <label>Mot de passe *</label>
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          placeholder="Mot de passe"
+                        />
+                        <span
+                          ><i
+                            class="fa fa-eye"
+                            aria-hidden="true"
+                            id="showPass"
+                            onclick="showPass()"
+                          ></i
+                        ></span>
+                        <div class="error"></div>
+                      </div>
+
+                      <div class="message">
+                        <label>Confirmer mot de passe *</label>
+                        <input
+                          type="password"
+                          id="passTwo"
+                          name="passTwo"
+                          placeholder="Confirmer mot de passe"
+                        />
+                        <span
+                          ><i
+                            class="fa fa-eye"
+                            aria-hidden="true"
+                            id="eye"
+                            onclick="toggle()"
+                          ></i
+                        ></span>
+                        <div class="error"></div>
+                      </div>
+
+                      <button type="submit" class="btn mb-2 mt-2">
+                        Enregistrer
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn py-0 fw-bold" type="submit">
+              <i class="bi bi-cart3"></i>
+              <p class="text-light">Votre panier</p>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- ======= End TopBar ======= -->
+
+    <!-- ======= Start Header  ======= -->
+    <div class="header sticky-top">
+      <nav class="navbar navbar-expand-md bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#">Para Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Soin & Beauté
+                </a>
+                <ul class="dropdown-menu">
+                  <img src="assets/imgs/header/header01.jpg" alt="" />
+                  <div class="links text-center">
+                    <li class="py-2"><a href="#">Visage</a></li>
+                    <li class="py-2"><a href="#">Cheveux</a></li>
+                    <li class="py-2"><a href="#">Main & Pied</a></li>
+                    <li class="py-2"><a href="#">Corps</a></li>
+                    <li class="py-2"><a href="#">Maquillages</a></li>
+                    <li class="py-2"><a href="#">Solaires</a></li>
+                    <li class="py-2"><a href="#">Soins Dentaires</a></li>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Bébé & Maman
+                </a>
+                <ul class="dropdown-menu">
+                  <img src="assets/imgs/header/header02.jpg" alt="" />
+                  <div class="links text-center">
+                    <li class="py-2"><a href="#">Bébé</a></li>
+                    <li class="py-2"><a href="#">Maman</a></li>
+                    <li class="py-2"><a href="#">Accessoires</a></li>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Orthopédie
+                </a>
+                <ul class="dropdown-menu">
+                  <img src="assets/imgs/header/header03.jpg" alt="" />
+                  <div class="links text-center">
+                    <li class="py-2"><a href="#">Tête & Cou</a></li>
+                    <li class="py-2"><a href="#">Tronc Rachis</a></li>
+                    <li class="py-2"><a href="#">Chaussures</a></li>
+                    <li class="py-2"><a href="#">Membres Supérieurs</a></li>
+                    <li class="py-2"><a href="#">Membres Inférieurs</a></li>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Matériel Médical
+                </a>
+                <ul class="dropdown-menu">
+                  <img src="assets/imgs/header/header04.jpg" alt="" />
+                  <div class="links text-center">
+                    <li class="py-2"><a href="#">Appareils De Mesure</a></li>
+                    <li class="py-2"><a href="#">Instrumentation</a></li>
+                    <li class="py-2"><a href="#">Consommables</a></li>
+                    <li class="py-2"><a href="#">Equipements</a></li>
+                    <li class="py-2"><a href="#">Hygiène</a></li>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" data-section=".contact" href="#"
+                  >Vente Flash</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- ======= End Header  ======= -->
+
+    <!-- ======= Start Slider ======= -->
+    <div class="slider">
+      <div
+        id="mainSlider"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#mainSlider"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#mainSlider"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#mainSlider"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="overlay"></div>
+          <div class="text">
+            <div class="content">
+              <h2>Bienvenue Chez Para Shop</h2>
+              <p>
+                Nous sommes là pour vous aider. N'hésitez pas de nous
+                contacter<br />
+                Votre satisfaction, Notre priorité
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="assets/imgs/landing/landing01.jpg"
+              class="d-block w-100"
+              alt="First Slide"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3500">
+            <img
+              src="assets/imgs/landing/landing02.jpg"
+              class="d-block w-100"
+              alt="Second Slide"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3500">
+            <img
+              src="assets/imgs/landing/landing03.jpg"
+              class="d-block w-100"
+              alt="Third Slide"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= End Slider ======= -->
+
+    <!-- ======= End Landing ======= -->
+    <section class="landing py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-6">
+            <div class="card mb-3 border-0">
+              <img
+                src="assets/imgs/landing/landing04.jpg"
+                class="card-img-top"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0">
+              <img
+                src="assets/imgs/landing/landing05.jpg"
+                class="card-img-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= End Landing ======= -->
+
+    <!-- Start Nouveaux Produits -->
+    <section class="newProduct py-2" id="newProduct">
+      <div class="container">
+        <h2 class="main-heading mb-5">Nouveaux Produits</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="owl-carousel owl-theme text-center">
+              <div class="item mb-4">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <div class="bg-white">
+                      <img
+                        src="assets/imgs/product/product01.jpg"
+                        class="img-fluid"
+                      />
+                      <figcaption
+                        data-bs-toggle="modal"
+                        data-bs-target="#product1"
+                      >
+                        <i class="bi bi-zoom-in"></i>
+                      </figcaption>
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin - Hyaluron Filler - Soin De Jour SPF15
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <div class="bg-white">
+                    <img
+                      src="assets/imgs/product/product02.jpg"
+                      class="img-fluid"
+                    />
+                    <figcaption
+                      data-bs-toggle="modal"
+                      data-bs-target="#product2"
+                    >
+                      <i class="bi bi-zoom-in"></i>
+                    </figcaption>
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        SVR CERABIOTIC Régénérant Comblant
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">40,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <div class="bg-white">
+                      <img
+                        src="assets/imgs/product/product03.jpg"
+                        class="img-fluid"
+                      />
+                      <figcaption
+                        data-bs-toggle="modal"
+                        data-bs-target="#product3"
+                      >
+                        <i class="bi bi-zoom-in"></i>
+                      </figcaption>
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin - Hyaluron Filler - Soin De Jour SPF15
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">72,00 TND</span>
+                          / <span class="old-price">90,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <div class="bg-white">
+                    <img
+                      src="assets/imgs/product/product04.jpg"
+                      class="img-fluid"
+                    />
+                    <figcaption
+                      data-bs-toggle="modal"
+                      data-bs-target="#product4"
+                    >
+                      <i class="bi bi-zoom-in"></i>
+                    </figcaption>
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        XEN CB3 Mousse Micellaire Nettoyante
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">46,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <div class="bg-white">
+                      <img
+                        src="assets/imgs/product/product05.jpg"
+                        class="img-fluid"
+                      />
+                      <figcaption
+                        data-bs-toggle="modal"
+                        data-bs-target="#product5"
+                      >
+                        <i class="bi bi-zoom-in"></i>
+                      </figcaption>
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Avène - Solaire - Anti Age SPF50+
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">50,40 TND</span>
+                          / <span class="old-price">63,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <div class="bg-white">
+                      <img
+                        src="assets/imgs/product/product06.jpg"
+                        class="img-fluid"
+                      />
+                      <figcaption
+                        data-bs-toggle="modal"
+                        data-bs-target="#product6"
+                      >
+                        <i class="bi bi-zoom-in"></i>
+                      </figcaption>
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin Serum Anti-Pigment - Peau Sèche
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <div class="bg-white">
+                    <img
+                      src="assets/imgs/product/product07.jpg"
+                      class="img-fluid"
+                    />
+                    <figcaption
+                      data-bs-toggle="modal"
+                      data-bs-target="#product7"
+                    >
+                      <i class="bi bi-zoom-in"></i>
+                    </figcaption>
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pharmaceris - Albucin Itensive - Crème De Nuit
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">57,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <div class="bg-white">
+                    <img
+                      src="assets/imgs/product/product08.jpg"
+                      class="img-fluid"
+                    />
+                    <figcaption
+                      data-bs-toggle="modal"
+                      data-bs-target="#product8"
+                    >
+                      <i class="bi bi-zoom-in"></i>
+                    </figcaption>
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pack SVR Sebiaclear MAT + PORES + Eau Micellaire
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">41,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <div class="bg-white">
+                      <img
+                        src="assets/imgs/product/product09.jpg"
+                        class="img-fluid"
+                      />
+                      <figcaption
+                        data-bs-toggle="modal"
+                        data-bs-target="#product9"
+                      >
+                        <i class="bi bi-zoom-in"></i>
+                      </figcaption>
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Jonzac Rehydrate Serum Concentre Desalterant
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">50,00 TND</span>
+                          / <span class="old-price">73,80 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product1 -->
+            <div
+              class="modal fade"
+              id="product1"
+              tabindex="-1"
+              aria-labelledby="product1Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product1.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>Ecerin serum duo anti-pigment - 30 ml</h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">179,20 TND</span>
+                            / <span class="oldPrice">224,00 TND</span>
+                          </p>
+                          <p>Ecerin serum duo anti-pigment</p>
+                          <p>
+                            Il s'agit d'un sérum qui permet de réduire les
+                            taches brunes, les taches de vieillesse et les
+                            taches de soleil et de prévenir leur apparition.
+                            <br />Il rend la peau bien plus lisse, lumineuse.
+                          </p>
+                          <p>Contenance : 30 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product2 -->
+            <div
+              class="modal fade"
+              id="product2"
+              tabindex="-1"
+              aria-labelledby="product2Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product02.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>SVR Cerabiotic Régénérant Comblant - 200 ml</h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">40,00 TND</span>
+                          </p>
+                          <p>SVR Cerabiotic Régénérant Comblant</p>
+                          <p>
+                            Physiopure Gelée moussante s’adresse aux femmes en
+                            quête de pureté qui préfèrent le nettoyage à l’eau.
+                            Extra légère, cette délicieuse gelée se transforme
+                            en une mousse onctueuse et abondante pour un
+                            nettoyage haute sensorialité, au rinçage facile.
+                          </p>
+                          <p>Contenance : 200 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product3 -->
+            <div
+              class="modal fade"
+              id="product3"
+              tabindex="-1"
+              aria-labelledby="product3Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product03.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Eucerin - Hyaluron Filler - Soin De Jour SPF15 -
+                            50ML
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">72,00 TND</span>
+                            / <span class="oldPrice">90,00 TND</span>
+                          </p>
+                          <p>
+                            EUCERIN HYALURON-FILLER + 3X EFFECT SOIN DE JOUR
+                            SPF15 Peau Sèche
+                          </p>
+                          <p>
+                            Eucerin Hyaluron Filler Day SPF 15 pour peau sèche
+                            s'attaque aux premiers signes de vieillissement des
+                            peaux sèches. Il repulpe visiblement les ridules et
+                            même les rides profondes et procure une hydratation
+                            durable pour un aspect rajeuni.
+                          </p>
+                          <p>Contenance : 50 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product4 -->
+            <div
+              class="modal fade"
+              id="product4"
+              tabindex="-1"
+              aria-labelledby="product4Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product04.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Xen Cb3 Defense Mousse Micellaire Nettoyante Peaux
+                            Mixtes à Grasses - 200ml
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">40,00 TND</span>
+                          </p>
+                          <p>
+                            XEN CB3 DEFENSE MOUSSE MICELLAIRE NETTOYANTE PEAUX
+                            MIXTES A GRASSES
+                          </p>
+                          <p>
+                            Oubliez le savon, et optez pour la mousse: le
+                            nettoyage est nettement plus agréable que par le
+                            passé. Cette mousse nettoie délicatement votre peau
+                            tout en éliminant les impuretés. Sa composition
+                            spéciale prévient efficacement l’apparition des
+                            imperfections.
+                          </p>
+                          <p>Contenance : 200 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product5 -->
+            <div
+              class="modal fade"
+              id="product5"
+              tabindex="-1"
+              aria-labelledby="product5Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product05.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>Avène - Solaire - Anti Age SPF50+, 50 mL</h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">50,40 TND</span>
+                            / <span class="oldPrice">63,00 TND</span>
+                          </p>
+                          <p>Ecran solaire Avène anti-âge SPF50+</p>
+                          <p>
+                            Avene la crème solaire de Très haute protection
+                            solaire spf50+ pour la peau sensible sèche du
+                            visage. Grâce à sa texture Sensation peau nue, la
+                            Crème SPF 50+ laisse un fini imperceptible sur la
+                            peau. La texture veloutée de avène ecran solaire
+                            procure à la peau une sensation de confort
+                            immédiate.
+                          </p>
+                          <p>Contenance : 50 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product6 -->
+            <div
+              class="modal fade"
+              id="product6"
+              tabindex="-1"
+              aria-labelledby="product6Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product06.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Eucerin Serum Anti-Pigment - Peau Sèche, 30 mL
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">179,20 TND</span>
+                            / <span class="oldPrice">224,00 TND</span>
+                          </p>
+                          <p>Eucerin Hyaluron-Filler Peeling & Sérum Nuit</p>
+                          <p>
+                            Eucerin Hyaluron-Filler Peeling & Sérum Nuit combine
+                            deux formules puissantes pour de multiples bénéfices
+                            anti-âge La double efficacité d'un peeling anti-âge
+                            et d'un sérum qui exfolie et affine la texture de la
+                            peau, favorise le renouvellement cellulaire et
+                            comble les rides, même les plus profondes. La peau
+                            est plus lumineuse et plus lisse.
+                          </p>
+                          <p>Contenance : 30 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product7 -->
+            <div
+              class="modal fade"
+              id="product7"
+              tabindex="-1"
+              aria-labelledby="product7Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product07.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Crème de nuit intensément dépigmentante -
+                            Pharmaceris Albucin Intensive - 30ml
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">57,00 TND</span>
+                          </p>
+                          <p>Peaux hyper-pigmentées</p>
+                          <p>
+                            Recommandé pour le soin quotidien des peaux
+                            présentant une hyperpigmentation du teint
+                            irrégulier, ou des peaux à risque de décolorations
+                            dues à l’exposition au soleil, à la contraception
+                            orale, à la grossesse, aux chirurgies esthétiques,
+                            aux traitements dermatologiques ou à l’inflammation.
+                          </p>
+                          <p>Contenance : 30 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product8 -->
+            <div
+              class="modal fade"
+              id="product8"
+              tabindex="-1"
+              aria-labelledby="product8Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product08.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Pack SVR Sebiaclear MAT + PORES + Eau Micellaire
+                            (offert)
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">41,00 TND</span>
+                          </p>
+                          <p>
+                            Pack SVR Sebiaclear MAT + PORES + Eau Micellaire
+                            (offert)
+                          </p>
+                          <p>
+                            Soin matifiant sebo regulateur ,anti pore dilatés.
+                            <br />
+                            Peaux mixtes à sensibles Ce pack contient : Pack
+                            SVR. <br />
+                            Sebiaclear MAT + PORES ; 40ML ; 05/2024 Pack SVR.
+                            <br />
+                            sebiaclear Eau Micellaire 75 ml (offert).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Product9 -->
+            <div
+              class="modal fade"
+              id="product9"
+              tabindex="-1"
+              aria-labelledby="product9Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+
+                    <div class="container">
+                      <div class="row py-3 pb-0">
+                        <div class="col-lg-6">
+                          <img
+                            src="assets/imgs/product/product09.jpg"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h5>
+                            Jonzac Rehydrate Serum Concentre Desalterant - 30 ml
+                          </h5>
+                          <p class="card-text pt-2">
+                            <span class="newPrice">50,00 TND</span>
+                            / <span class="newPrice">73,80 TND</span>
+                          </p>
+                          <p>JONZAC REHYDRATE SERUM 30ML</p>
+                          <p>
+                            JONZAC REHYDRATE SERUM est un sérum ultra-léger et
+                            concentré qui pénètre profondément dans la peau pour
+                            hydrater et repulper les cellules de la peau. JONZAC
+                            REHYDRATE SERUM CONCENTRE DESALTERANT est un sérum
+                            réhydratant qui réduit l'apparence des rides et
+                            ridules tout en hydratant et repulpant les cellules
+                            de la peau.
+                          </p>
+                          <p>Contenance : 30 mL</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="number"
+                      min="0"
+                      max="999999"
+                      name="quantite"
+                      value="0"
+                    />
+                    <button class="btn1 border-0 p-2 rounded-2 text-white">
+                      <i class="bi bi-cart3"></i> AJOUTER AU PANIER
+                    </button>
+                    <button
+                      class="btn2 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-cart3"></i>
+                    </button>
+                    <button
+                      class="btn3 border-0 p-2 rounded-2 text-white"
+                      title="Plus de détails"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Nouveaux Produits -->
+
+    <!-- Start Meilleurs Ventes -->
+    <section class="superProduct py-2" id="superProduct">
+      <div class="container">
+        <h2 class="main-heading mb-5">Meilleures Ventes</h2>
+        <div class="row text-center">
+          <div class="col-12 m-auto">
+            <div class="owl-carousel owl-theme">
+              <div class="item mb-4">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img src="assets/imgs/product/product01.jpg" />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin Serum Anti-Pigment - Peau Sèche
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product23.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        SVR CERABIOTIC Régénérant Comblant
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">40,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product19.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin - Hyaluron Filler - Soin De Jour SPF15
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">72,00 TND</span>
+                          / <span class="old-price">90,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product17.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        XEN CB3 Mousse Micellaire Nettoyante
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">46,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product14.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Avène - Solaire - Anti Age SPF50+
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">63,00 TND</span>
+                          / <span class="old-price">50,40 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product12.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin Serum Anti-Pigment - Peau Sèche
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product16.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pharmaceris - Albucin Itensive - Crème De Nuit
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">57,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product27.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pack SVR Sebiaclear MAT + PORES + Eau Micellaire
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">41,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product04.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Jonzac Rehydrate Serum Concentre Desalterant
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">50,00 TND</span>
+                          / <span class="old-price">73,80 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Meilleurs Ventes -->
+
+    <!-- Start Brands -->
+    <section class="brands pt-2 pb-2">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo01.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo02.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo03.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo04.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo05.png" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-2 mb-5">
+            <div class="card border-0">
+              <img src="assets/imgs/logo/logo06.png" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Brands -->
+
+    <!-- Start Coffrets -->
+    <section class="newProduct py-2" id="product">
+      <div class="container">
+        <h2 class="main-heading mb-5">Nos Coffrets</h2>
+        <div class="row text-center">
+          <div class="col-12 m-auto">
+            <div class="owl-carousel owl-theme">
+              <div class="item mb-4">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product01.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin Serum Anti-Pigment - Peau Sèche
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product20.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        SVR CERABIOTIC Régénérant Comblant
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">40,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product21.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin - Hyaluron Filler - Soin De Jour SPF15
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">72,00 TND</span>
+                          / <span class="old-price">90,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product04.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        XEN CB3 Mousse Micellaire Nettoyante
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">46,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product23.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Avène - Solaire - Anti Age SPF50+
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">63,00 TND</span>
+                          / <span class="old-price">50,40 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product24.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Eucerin Serum Anti-Pigment - Peau Sèche
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">179,20 TND</span>
+                          / <span class="old-price">224,00 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product25.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pharmaceris - Albucin Itensive - Crème De Nuit
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">57,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card border-0">
+                  <button class="bg-white border-0">
+                    <img
+                      src="assets/imgs/product/product19.jpg"
+                      class="img-fluid"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title mb-3">
+                        Pack SVR Sebiaclear MAT + PORES + Eau Micellaire
+                      </h3>
+                      <p class="card-text pb-2">
+                        <span class="price">41,00 TND</span>
+                      </p>
+                      <a href="#" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box promotion">
+                  <div class="card border-0">
+                    <div class="label">Promotion</div>
+                    <button class="bg-white border-0">
+                      <img
+                        src="assets/imgs/product/product27.jpg"
+                        class="img-fluid"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title mb-3">
+                          Jonzac Rehydrate Serum Concentre Desalterant
+                        </h3>
+                        <p class="card-text pb-2">
+                          <span class="new-price">50,00 TND</span>
+                          / <span class="old-price">73,80 TND</span>
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                          <i class="bi bi-cart3"></i> Ajouter au panier
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Coffrets -->
+
+    <!-- Start Services -->
+    <section class="services pb-3" id="services">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card border-0 rounded-0 pt-5 pb-5">
+              <i class="bi bi-credit-card"></i>
+              <p>Paiement Sécurisé</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card border-0 rounded-0 pt-5 pb-5">
+              <i class="bi bi-truck"></i>
+              <p>Livraison Gratuite Dès 90 DT</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card border-0 rounded-0 pt-5 pb-5">
+              <i class="bi bi-arrow-left-right"></i>
+              <p>Politique De Retour</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card border-0 rounded-0 pt-5 pb-5">
+              <i class="bi bi-headphones"></i>
+              <p>Service clients 6J/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <h3>ParaShop</h3>
+          <ul class="social">
+            <li>
+              <a href="#" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="youtube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="box">
+          <p>Liens Utiles</p>
+          <ul class="links">
+            <li><a href="#newProduct">Nouveaux Produits</a></li>
+            <li><a href="#superProduct">Meilleures Ventes</a></li>
+            <li><a href="#product">Nos Coffrets</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div class="info">Tunis, Tunisie</div>
+          </div>
+          <div class="line">
+            <i class="bi bi-clock-fill"></i>
+            <div class="info">Horaire : De 09:00 à 19:00</div>
+          </div>
+          <div class="line">
+            <i class="bi bi-telephone-fill"></i>
+            <div class="info">
+              <span>(+216) 50 000 000</span>
+              <span>(+216) 70 000 000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright mt-0">&copy; copyright 2022</div>
+    <!-- End Footer -->
+
+    <button type="button" class="btn btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
